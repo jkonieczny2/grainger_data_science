@@ -9,7 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-with open('models/random_forest_classifier.pkl') as f:
+with open('models/random_forest_classifier_final.pkl') as f:
     model = pickle.load(f)
 
 categorical_variables = [

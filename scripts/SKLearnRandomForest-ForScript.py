@@ -65,6 +65,9 @@ make_names = set(top_25_makes.index[:25])
 citations['top_25_makes'] = citations['Make'].apply(lambda x: (x in make_names)*1)
 citations['top_25_makes'] = citations['top_25_makes'].astype('category')
 
+# Replace null Latitude & Longitude with 99999.0
+citations['Latitude'] = citations['Latitude'].fillna(99999.0)
+citations['Longitude'] = citations['Longitude'].fillna(99999.0)
 
 print("Formatting and transforming data")
 # Date formatting and coversion to days since epoch
