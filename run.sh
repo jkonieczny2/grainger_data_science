@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+# Create necessary directories
+mkdir -p data
+mkdir -p app/models
+
 # Download CSV file from S3
 cd scripts
 URL="https://s3-us-west-2.amazonaws.com/pcadsassessment/parking_citations.corrupted.csv"
