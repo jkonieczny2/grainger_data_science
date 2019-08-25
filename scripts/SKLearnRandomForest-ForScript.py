@@ -74,7 +74,7 @@ print("Formatting and transforming data")
 citations['Issue_Date'] = pd.to_datetime(citations['Issue_Date'])
 
 citations['Plate_Expiry_Date'] = citations['Plate_Expiry_Date'].fillna('')
-citations['Plate_Expiry_Date'] = pd.to_datetime(citations['Plate_Expiry_Date'].str[:-2], format='%Y%M', errors='coerce')
+citations['Plate_Expiry_Date'] = pd.to_datetime(citations['Plate_Expiry_Date'].str[:-2], format='%Y%m', errors='coerce')
 
 citations['Issue_Date'] = (citations['Issue_Date'] - datetime(2000,01,01)).dt.days
 citations['Plate_Expiry_Date'] = (citations['Plate_Expiry_Date'].fillna(datetime(2000,01,01)) - datetime(2000,01,01)).dt.days
